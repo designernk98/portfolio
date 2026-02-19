@@ -6,11 +6,11 @@ import { PurpleButton } from "./ui/PurpleButton";
 import { Pen } from "lucide-react";
 import { TypewriterText } from "./ui/TypewriterText";
 
-export default function Services() {
+export default function Experience() {
  return (
   <section
-   id="services"
-   className="pb-[116px] pt-[50px] px-[138px] min-h-screen bg-[radial-gradient(circle_at_85%_50%,#880096_0%,#f204ff75_25%,#000000_58%)] overflow-hidden relative">
+   id="Experience"
+   className="pb-[116px] pt-[50px] px-[138px] min-h-screen bg-[radial-gradient(circle_at_15%_50%,#880096_0%,#f204ff75_23%,#000000_55%)] overflow-hidden relative">
    <div className="relative z-10">
     {/* Logo - Top Left */}
     <div className=" top-0 left-0 z-20 pb-[39px]">
@@ -23,20 +23,17 @@ export default function Services() {
     </div>
 
     {/* Main Grid Layout */}
-    <div className="grid lg:grid-cols-2 gap-12 items-center pt-16 md:pt-0">
+    <div className="flex flex-row-reverse justify-between    gap-12 items-center pt-16 md:pt-0">
      {/* Service Card - Left */}
      <motion.div
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="flex flex-col gap-6">
+      className="flex flex-col gap-[53px]">
       <div>
-       <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-        Our{" "}
-        <span className="text-[#F204FF]">
-         <TypewriterText text="Services" cursorColor="transparent" />
-        </span>
+       <h2 className="text-[36px] font-[700] bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_30%,#F204FF_100%)] bg-clip-text text-transparent">
+        Experience
        </h2>
       </div>
 
@@ -67,7 +64,7 @@ export default function Services() {
       className="flex justify-center lg:justify-end relative">
       <div className="relative w-[400px] h-[400px] md:w-[500px] md:h-[500px] shrink-0 rounded-full overflow-hidden border-2 border-white/10">
        <Image
-        src="/service.jpg"
+        src="/experience.jpg"
         alt="Our Services"
         fill
         className="object-cover"

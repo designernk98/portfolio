@@ -11,7 +11,8 @@ const navItems = [
  { name: "About", to: "about" },
  { name: "Services", to: "services" },
  { name: "Projects", to: "projects" },
- { name: "contact", to: "contact" }, // lowercase as per design
+ { name: "Contact", to: "contact" },
+ { name: "IN TOUCH", to: "footer" },
 ];
 
 export default function Navbar() {
@@ -36,7 +37,7 @@ export default function Navbar() {
     {/* Logo */}
     <div className="flex items-center gap-2 font-bold text-xl tracking-wider">
      {/* Placeholder for Logo - effectively text/icon based on design */}
-     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-purple-600 flex items-center justify-center text-white text-xs">
+     <div className="w-8 h-8 rounded-full bg-linear-to-br from-orange-400 to-purple-600 flex items-center justify-center text-white text-xs">
       UI
      </div>
      <span className="text-white">Designs</span>
@@ -51,8 +52,8 @@ export default function Navbar() {
        smooth={true}
        duration={500}
        offset={-70}
-       className="text-gray-300 hover:text-white cursor-pointer uppercase text-sm tracking-wide transition-colors border border-transparent hover:border-white/20 px-4 py-1 rounded-full hover:bg-white/5"
-       activeClass="text-primary border-primary/50 bg-primary/10"
+       className="text-white/70 hover:text-[#F204FF] cursor-pointer text-[18px] font-[400]  transition-colors border border-white hover:border-[#F204FF] px-2 py-1 rounded-[9px] hover:bg-white/10"
+       activeClass="bg-white/10 border-white/40"
        spy={true}>
        {item.name}
       </ScrollLink>

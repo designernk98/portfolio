@@ -54,13 +54,21 @@ export default function Projects() {
    id="projects"
    className="pt-[104px] bg-black overflow-hidden relative min-h-screen flex flex-col justify-center"
    ref={containerRef}>
+   {/* Background Glow - Bottom Center "Half Circle" Effect */}
+   <div className="absolute bottom-0 left-1/2 w-[800px] h-[500px] bg-[#F204FF]/30 rounded-full blur-[248px] -translate-x-1/2 translate-y-1/2 pointer-events-none z-0" />
+
    {/* Header */}
 
    <h2 className="text-[36px] absolute top-[100px] left-1/2 translate-x-[-50%] text-center  font-bold text-white">
     Our <span className="text-[#D900A9]">projects</span>
    </h2>
 
-   <Image src="/projects.png" alt="Projec 1" fill className="object-contain" />
+   <Image
+    src="/projects.png"
+    alt="Projec 1"
+    fill
+    className="object-contain relative z-10"
+   />
   </section>
  );
 }

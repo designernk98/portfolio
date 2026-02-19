@@ -33,7 +33,7 @@ export default function Hero() {
      <div className="text-2xl md:text-4xl font-bold text-white flex items-center gap-2">
       <span>and I'm a</span>
       <span className="text-[#F204FF]">
-       <TypewriterText text="UI/UX Designer" delay={1} />
+       <TypewriterText text="UI/UX Designer" cursorColor="transparent" />
       </span>
      </div>
 
@@ -67,14 +67,14 @@ export default function Hero() {
         <a
          key={i}
          href={href}
-         className="p-2 border border-white/20 rounded-full text-white hover:bg-[#F204FF] hover:border-[#F204FF] transition-all duration-300">
+         className="w-10 h-10 flex items-center justify-center border border-white/20 rounded-full text-white hover:bg-[#F204FF] hover:border-[#F204FF] transition-all duration-300 shrink-0">
          <Icon size={20} />
         </a>
        ))}
       </div>
 
       <div>
-       <PurpleButton href="https://www.canva.com/design/DAG_5d4fXrs/E7H785AQhPlCd8XgZKzzkA/edit?utm_content=DAG_5d4fXrs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+       <PurpleButton href="/cv.pdf" target="_blank">
         Download CV
        </PurpleButton>
       </div>
