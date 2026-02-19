@@ -9,15 +9,18 @@ export default function About() {
  return (
   <section
    id="about"
-   className="pb-[42px] pt-[39px] px-[138px] h-full bg-[radial-gradient(circle_at_15%_50%,#880096_0%,#f204ff75_35%,#000000_75%)] overflow-hidden relative">
+   className="pb-[42px] pt-[39px] px-4 md:px-8 lg:px-[40px] xl:px-[138px] h-full bg-[radial-gradient(circle_at_15%_50%,#880096_0%,#f204ff75_35%,#000000_75%)] overflow-hidden relative">
    <div className=" relative z-10">
     {/* Logo - Top Left */}
     <div className="absolute top-0 left-0 md:left-0 z-20">
-     <div className="flex items-center gap-2">
-      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#F204FF] to-[#AD66B1] flex items-center justify-center text-white font-bold text-xs ring-2 ring-white/50">
-       <span className="italic">N</span>
-      </div>
-      <span className="text-white font-bold text-xl">Designs</span>
+     <div className="relative w-[120px] h-[40px]">
+      <Image
+       src="/designs.png"
+       alt="Designs Logo"
+       fill
+       className="object-contain"
+       priority
+      />
      </div>
     </div>
 
@@ -30,7 +33,7 @@ export default function About() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       className="flex md:justify-start justify-center relative pt-10">
-      <div className="relative w-[286px] min-h-[467px]   aspect-[3/4]">
+      <div className="relative w-full max-w-[286px] min-h-[467px] aspect-3/4">
        <Image
         src="/girl.svg"
         alt="About Me"

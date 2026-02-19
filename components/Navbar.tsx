@@ -1,10 +1,11 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
 const navItems = [
  { name: "HOME", to: "home" },
@@ -30,21 +31,25 @@ export default function Navbar() {
  return (
   <nav
    className={cn(
-    "fixed top-0 left-0 w-full z-50 px-[138px] transition-all duration-300",
+    "fixed top-0 left-0 w-full z-50 px-4 md:px-8 lg:px-[40px] xl:px-[138px] transition-all duration-300",
     scrolled ? "bg-black/80 backdrop-blur-md py-4" : "bg-transparent py-6",
    )}>
    <div className="container flex items-center justify-between">
     {/* Logo */}
-    <div className="flex items-center gap-2 font-bold text-xl tracking-wider">
-     {/* Placeholder for Logo - effectively text/icon based on design */}
-     <div className="w-8 h-8 rounded-full bg-linear-to-br from-orange-400 to-purple-600 flex items-center justify-center text-white text-xs">
-      UI
+    <Link href="#home" className="flex items-center gap-2 relative z-50">
+     <div className="relative w-[120px] h-[40px]">
+      <Image
+       src="/designs.png"
+       alt="Designs Logo"
+       fill
+       className="object-contain"
+       priority
+      />
      </div>
-     <span className="text-white">Designs</span>
-    </div>
+    </Link>
 
     {/* Desktop Nav */}
-    <div className="hidden md:flex items-center gap-8">
+    <div className="hidden md:flex items-center gap-4 lg:gap-8">
      {navItems.map((item) => (
       <ScrollLink
        key={item.name}
@@ -52,7 +57,7 @@ export default function Navbar() {
        smooth={true}
        duration={500}
        offset={-70}
-       className="text-white/70 hover:text-[#F204FF] cursor-pointer text-[18px] font-[400]  transition-colors border border-white hover:border-[#F204FF] px-2 py-1 rounded-[9px] hover:bg-white/10"
+       className="text-white/70 hover:text-[#F204FF] cursor-pointer text-sm lg:text-[18px] font-[400] transition-colors border border-white hover:border-[#F204FF] px-2 py-1 rounded-[9px] hover:bg-white/10"
        activeClass="bg-white/10 border-white/40"
        spy={true}>
        {item.name}

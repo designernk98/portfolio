@@ -12,25 +12,25 @@ export default function Hero() {
  return (
   <section
    id="home"
-   className="h-screen md:pl-[138px] flex items-center justify-center pt-20 overflow-hidden bg-black">
+   className="min-h-screen px-4 md:px-8 lg:px-[40px] xl:px-[138px] flex items-center justify-center pt-28 md:pt-20 overflow-hidden bg-black">
    <div className="container px-0 grid lg:grid-cols-2 gap-12 items-center relative z-10">
     {/* Text Content */}
     <motion.div
      initial={{ opacity: 0, x: -50 }}
      animate={{ opacity: 1, x: 0 }}
      transition={{ duration: 0.8 }}
-     className="flex flex-col gap-6">
-     <h2 className="text-3xl md:text-4xl font-bold text-white">
+     className="flex flex-col gap-6 relative z-30">
+     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
       Hello <span className="text-[#F204FF]">it's</span> me
      </h2>
 
-     <h1 className="text-[32px] md:text-[48px] lg:text-[54px] xxl:text-[64px] font-extrabold tracking-tight text-white drop-shadow-lg leading-tight whitespace-nowrap">
+     <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-white drop-shadow-lg leading-tight whitespace-nowrap">
       <span className="bg-clip-text text-transparent bg-linear-to-r from-[#F204FF] to-white">
        NOOR UL HUDA SHAH
       </span>
      </h1>
 
-     <div className="text-2xl md:text-4xl font-bold text-white flex items-center gap-2">
+     <div className="text-xl md:text-3xl lg:text-4xl font-bold text-white flex items-center gap-2">
       <span>and I'm a</span>
       <span className="text-[#F204FF]">
        <TypewriterText text="UI/UX Designer" cursorColor="transparent" />
@@ -90,12 +90,12 @@ export default function Hero() {
      {/* We use a placeholder logic here as requested, simulating the girl image */}
      {/* Determine the exact visual style - the user mentioned "that girl image" */}
      {/* I'll use a container with an illustrative placeholder */}
-     <div className="relative w-[580px] h-[580px] md:w-[500px] md:h-[600px] z-10">
+     <div className="relative w-full max-w-[580px] aspect-square md:w-[500px] md:h-[600px] z-10">
       {/* This div represents the image area. Since we don't have the exact asset, we use a placeholder standard or the one uploaded if it matches. 
             The user said "i will add my own u can use any dummy image there". 
             I will use a generic placeholder URL or a solid block with an icon. 
         */}
-      <div className="w-full h-full relative py-[40px] pr-[200px]">
+      <div className="w-full h-full relative py-[40px] pr-[200px] lg:pr-0">
        <img
         src="/girl.svg"
         alt="Profile"

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { PurpleButton } from "./ui/PurpleButton";
 import { Mail, User, Globe, MapPin } from "lucide-react";
 
@@ -8,18 +9,21 @@ export default function Contact() {
  return (
   <section
    id="contact"
-   className="pb-[116px] pt-[50px] px-[138px] bg-black relative overflow-hidden">
+   className="pb-[116px] pt-[50px] px-4 md:px-8 lg:px-[40px] xl:px-[138px] bg-black relative overflow-hidden">
    {/* Background Glow - Top Center "Half Circle" Effect */}
-   <div className="absolute top-0 left-1/2 w-[800px] h-[500px] bg-[#F204FF]/30 rounded-full blur-[248px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+   <div className="absolute top-0 left-1/2 w-[800px] h-[500px] bg-[#F204FF]/60 rounded-full blur-[248px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
    <div className="relative z-10">
     {/* Designs Tag - Matching Services.tsx */}
     <div className="top-0 left-0 z-20 pb-[39px]">
-     <div className="flex items-center gap-2">
-      <div className="w-10 h-10 rounded-full bg-linear-to-br from-[#F204FF] to-[#AD66B1] flex items-center justify-center text-white font-bold text-xs ring-2 ring-white/50">
-       <span className="italic">N</span>
-      </div>
-      <span className="text-white font-bold text-xl">Designs</span>
+     <div className="relative w-[120px] h-[40px]">
+      <Image
+       src="/designs.png"
+       alt="Designs Logo"
+       fill
+       className="object-contain"
+       priority
+      />
      </div>
     </div>
 
@@ -43,28 +47,6 @@ export default function Contact() {
           e.currentTarget.style.display = "none";
          }}
         />
-       </div>
-
-       {/* Overlay Content */}
-       <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 bg-black/20">
-        <h3 className="text-3xl md:text-4xl font-light tracking-wide mb-6">
-         CONTACT US
-        </h3>
-
-        <div className="flex gap-4">
-         {[
-          { icon: Mail },
-          { icon: User },
-          { icon: Globe },
-          { icon: MapPin },
-         ].map((item, i) => (
-          <div
-           key={i}
-           className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
-           <item.icon size={18} />
-          </div>
-         ))}
-        </div>
        </div>
       </div>
      </motion.div>
