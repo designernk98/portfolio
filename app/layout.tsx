@@ -61,9 +61,11 @@ export default function RootLayout({
  return (
   <html lang="en" className="dark scroll-smooth">
    <body
-    className={`${inter.variable} antialiased bg-background text-foreground overflow-x-hidden`}>
+    className={`${inter.variable} antialiased bg-black text-foreground overflow-x-hidden`}>
     <Preloader />
-    {children}
+    <div className="max-w-[1440px] mx-auto relative w-full shadow-2xl overflow-x-hidden">
+     {children}
+    </div>
    </body>
   </html>
  );

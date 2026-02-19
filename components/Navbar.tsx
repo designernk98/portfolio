@@ -31,7 +31,7 @@ export default function Navbar() {
  return (
   <nav
    className={cn(
-    "fixed top-0 left-0 w-full z-50 px-4 md:px-8 lg:px-[40px] xl:px-[138px] transition-all duration-300",
+    "fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] z-50 px-4 md:px-8 lg:px-[40px] xl:px-[138px] transition-all duration-300",
     scrolled ? "bg-black/80 backdrop-blur-md py-4" : "bg-transparent py-6",
    )}>
    <div className="container flex items-center justify-between">
