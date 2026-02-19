@@ -6,7 +6,7 @@ export default function Footer() {
  return (
   <footer
    id="footer"
-   className="relative bg-black text-white pt-20 pb-10 overflow-hidden w-full">
+   className="relative bg-black text-white pt-20 pb-[90px] overflow-hidden w-full">
    {/* Background Gradient - Matching design purple glow from top/center */}
    <div className="absolute top-0 left-1/2 w-[800px] h-[500px] bg-[#4C0550]/40 rounded-full blur-[150px] -translate-x-1/2 -translate-y-[60%] pointer-events-none" />
 
@@ -57,6 +57,15 @@ export default function Footer() {
          Indeed.com
         </p>
        </div>
+      </div>
+      {/* bottom */}
+      <div className="w-[729px] flex justify-between items-center pt-[50px]">
+       <p className="bg-linear-to-r from-white to-[#F204FF] bg-clip-text text-transparent text-lg">
+        2026 The Portfolio
+       </p>
+       <p className="bg-linear-to-r from-white to-[#F204FF] bg-clip-text text-transparent text-lg">
+        Designed by @hudashah
+       </p>
       </div>
      </div>
 

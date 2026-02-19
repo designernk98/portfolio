@@ -41,7 +41,7 @@ export default function Services() {
       </div>
 
       {/* Service Card */}
-      <div className="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-3xl p-8 border border-white/10 w-[429px] h-[429px]">
+      <div className="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-3xl p-8 border border-white/10 w-[429px] h-[429px] hover:border-[#f204ff] hover:border-2">
        <div className="flex items-start gap-4 mb-6">
         <Image src="/pointer.png" alt="pointer" width={32} height={32} />
        </div>

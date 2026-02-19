@@ -38,17 +38,19 @@ export default function Experience() {
       </div>
 
       {/* Service Card */}
-      <div className="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-3xl p-8 border border-white/10 w-[429px] h-[429px]">
+      <div className="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-3xl p-8 border border-white/10 w-[429px] h-[429px] hover:border-2 hover:border-[#f204ff]">
        <div className="flex items-start gap-4 mb-6">
         <Image src="/pointer.png" alt="pointer" width={32} height={32} />
        </div>
 
-       <p className="text-gray-300 leading-relaxed text-sm md:text-base mb-6">
-        I provide UX/UI design services focused on creating intuitive digital
-        experiences. My work includes user research, wireframing, and user flow
-        design. I design visually engaging, responsive interfaces for web and
-        mobile. I also create design systems and collaborate closely with
-        developers for smooth handoff.
+       <p className="text-gray-300 mb-6">
+        <ul className="text-[18px] font-[400]">
+         <li>• UX/UI Designer with 1 year professional experience</li>
+         <li>• One year of professional UX/UI design experience</li>
+         <li>• UX/UI Designer — 1 year hands-on experience</li>
+         <li>• UX/UI Designer with 1 year industry experience</li>
+         <li>• Experience in UX research and UI design</li>
+        </ul>
        </p>
 
        <PurpleButton>Read More</PurpleButton>
